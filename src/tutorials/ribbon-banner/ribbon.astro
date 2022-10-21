@@ -1,0 +1,100 @@
+---
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Prop types
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+export type RibbonProps = {
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
+  size?: 'small' | 'medium' | 'large'
+  color?: 'amber' | 'green' | 'purple' | 'cyan'
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Styles lookup
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const sizeClasses: Record<RibbonProps['size'], string> = {
+  small: 'w-24',
+  medium: 'w-28',
+  large: 'w-36',
+}
+
+const positionClasses: Record<
+  RibbonProps['position'],
+  {
+    wrapper: string
+    shadeOne: string
+    shadeTwo: string
+    banner: string
+  }
+> = {
+  'top-left': {
+    wrapper: '-top-2 -left-2',
+    shadeOne: 'top-0 right-0',
+    shadeTwo: 'bottom-0 left-0',
+    banner: 'bottom-0 left-0 -rotate-45 origin-bottom-left',
+  },
+  'top-right': {
+    wrapper: '-top-2 -right-2',
+    shadeOne: 'top-0 left-0',
+    shadeTwo: 'bottom-0 right-0',
+    banner: 'bottom-0 right-0 rotate-45 origin-bottom-right',
+  },
+  'bottom-left': {
+    wrapper: '-bottom-2 -left-2',
+    shadeOne: 'top-0 left-0',
+    shadeTwo: 'bottom-0 right-0',
+    banner: 'top-0 left-0 rotate-45 origin-top-left',
+  },
+  'bottom-right': {
+    wrapper: '-bottom-2 -right-2',
+    shadeOne: 'top-0 right-0',
+    shadeTwo: 'bottom-0 left-0',
+    banner: 'top-0 right-0 -rotate-45 origin-top-right',
+  },
+}
+
+const colorClasses: Record<
+  RibbonProps['color'],
+  {
+    shades: string
+    banner: string
+  }
+> = {
+  amber: {
+    shades: 'bg-amber-500',
+    banner: 'bg-amber-300 text-amber-800 hover:bg-yellow-300',
+  },
+  green: {
+    shades: 'bg-green-500',
+    banner: 'bg-green-300 text-green-800 hover:bg-emerald-300',
+  },
+  purple: {
+    shades: 'bg-purple-500',
+    banner: 'bg-purple-300 text-purple-800 hover:bg-violet-300',
+  },
+  cyan: {
+    shades: 'bg-cyan-500',
+    banner: 'bg-cyan-300 text-cyan-800 hover:bg-sky-300',
+  },
+}
+
+const { position = 'top-right', size = 'medium', color = 'amber' } = Astro.props
+---
+
+<div
+  class={`${sizeClasses[size]} aspect-square absolute ${positionClasses[position].wrapper} overflow-hidden rounded-sm`}
+>
+  <div
+    class={`absolute ${positionClasses[position].shadeOne} ${colorClasses[color].shades} h-2 w-2`}
+  >
+  </div>
+  <div
+    class={`absolute ${positionClasses[position].shadeTwo} ${colorClasses[color].shades} h-2 w-2`}
+  >
+  </div>
+  <a
+    href="#"
+    class={`py-1.5 font-semibold uppercase text-xs tracking-wider block w-square-diagonal text-center absolute ${positionClasses[position].banner} shadow-sm ${colorClasses[color].banner}`}
+  >
+    <slot />
+  </a>
+</div>

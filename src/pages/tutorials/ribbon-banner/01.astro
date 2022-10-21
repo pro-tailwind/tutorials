@@ -1,0 +1,18 @@
+---
+import Layout from '~layouts/base.astro'
+import HardcodedRibbons from '~tutorials/ribbon-banner/hardcoded.astro'
+import Ribbon from '~tutorials/ribbon-banner/ribbon.astro'
+---
+
+<Layout>
+  <div class="min-h-screen bg-blue-800 p-8">
+    <div class="relative mx-auto bg-white rounded-xl shadow-xl h-72 w-80">
+      <!-- Let's build a reusable Ribbon component! -->
+      <Ribbon size="small">Small</Ribbon>
+      <Ribbon size="large">Not Small</Ribbon>
+      <Ribbon size="large" position="top-left" color="green">Top left</Ribbon>
+      <Ribbon position="bottom-left" color="purple">Bottom left</Ribbon>
+      <Ribbon position="bottom-right" color="cyan">Bottom right</Ribbon>
+    </div>
+  </div>
+</Layout>

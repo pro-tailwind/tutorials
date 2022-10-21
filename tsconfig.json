@@ -1,0 +1,10 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~layouts/*": ["src/layouts/*"],
+      "~tutorials/*": ["src/tutorials/*"]
+    }
+  }
+}
