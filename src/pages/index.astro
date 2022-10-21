@@ -1,12 +1,14 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+---
+import Layout from '~layouts/base.astro'
+---
+
+<Layout>
+  <div class="max-w 3xl mx-auto px-4 mt-12">
+    <h1>Pro Tailwind Tutorials</h1>
+    <ul class="mt-8">
+      <li>
+        <a class="underline hover:text-indigo-600" href="/tutorials/ribbon-banner">Ribbon Banner</a>
+      </li>
+    </ul>
+  </div>
+</Layout>

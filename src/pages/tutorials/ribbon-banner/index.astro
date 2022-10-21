@@ -1,0 +1,24 @@
+---
+import { AstroInstance } from 'astro'
+import Layout from '~layouts/base.astro'
+
+type AstroInstanceWithTitle = AstroInstance & { title: string }
+
+const steps = (await Astro.glob('./*.astro')) as AstroInstanceWithTitle[]
+---
+
+<Layout>
+  <div class="container mx-auto px-4 mt-12">
+    <ul>
+      {
+        steps.map((step) => (
+          <li>
+            <a class="underline hover:text-indigo-600" href={step.url}>
+              {step.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>
