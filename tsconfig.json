@@ -4,7 +4,8 @@
     "baseUrl": ".",
     "paths": {
       "~layouts/*": ["src/layouts/*"],
-      "~tutorials/*": ["src/tutorials/*"]
+      "~tutorials/*": ["src/tutorials/*"],
+      "~tips/*": ["src/tips/*"]
     }
   }
 }

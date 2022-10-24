@@ -1,0 +1,14 @@
+---
+const { ...attributes } = Astro.props
+---
+
+<div
+  {...attributes}
+  class="group p-4 font-medium data-[status=success]:bg-green-200 data-[status=warning]:bg-yellow-200 data-[status=danger]:bg-red-100 rounded-lg"
+>
+  <p
+    class="group-data-[status=success]:text-green-800 group-data-[status=warning]:text-yellow-800 group-data-[status=danger]:text-red-800"
+  >
+    <slot />
+  </p>
+</div>
