@@ -5,7 +5,10 @@
     "paths": {
       "~layouts/*": ["src/layouts/*"],
       "~tutorials/*": ["src/tutorials/*"],
-      "~tips/*": ["src/tips/*"]
+      "~tips/*": ["src/tips/*"],
+      "~utils/*": ["src/utils/*"],
+      "~types/*": ["src/types/*"],
+      "~/*": ["src/*"]
     }
   }
 }

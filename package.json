@@ -14,6 +14,7 @@
     "astro": "^1.5.0"
   },
   "devDependencies": {
+    "@tailwindcss/container-queries": "^0.1.0",
     "autoprefixer": "^10.4.12",
     "postcss": "^8.4.18",
     "prettier": "^2.7.1",
