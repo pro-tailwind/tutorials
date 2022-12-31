@@ -1,28 +1,37 @@
 ---
-import Layout from '~layouts/base.astro'
 import { AstroInstance } from 'astro'
+import Layout from '~layouts/base.astro'
+import { getTagClasses, cx } from '~/utils'
+
+import type { Tag } from '~/types'
 
 type AstroInstanceWithTitle = AstroInstance & {
   id: string
   title: string
-  tag: 'Challenge' | 'Solution'
+  tag: Tag
 }
-const tutorials = (await Astro.glob('./tutorials/**/index.astro')) as AstroInstanceWithTitle[]
+
+const tutorials = (await Astro.glob('./**/index.astro')) as AstroInstanceWithTitle[]
+export const title = 'Pro Tailwind Tutorials'
 ---
 
 <Layout>
-  <div class="max-w 3xl mx-auto px-4 mt-12">
-    <h1>Pro Tailwind Tutorials</h1>
-    <ul class="mt-8">
-      {
-        tutorials.map((tutorial) => (
-          <li>
-            <a class="underline hover:text-indigo-600" href={tutorial.url}>
-              {tutorial.title}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+  <div class="min-h-screen bg-gray-50">
+    <div class="mx-auto max-w-6xl py-16 px-4 md:py-24">
+      <h1 class="text-2xl font-semibold text-gray-900">{title}</h1>
+
+      <ul class="mt-12 grid gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+        {
+          tutorials.map((tutorial) => (
+            <li class="relative rounded-lg bg-white p-6 shadow transition duration-75 hover:-translate-y-[2px] hover:shadow-md">
+              <p class="block text-gray-900 hover:text-indigo-600 hover:underline">
+                {tutorial.title}
+              </p>
+              <a href={tutorial.url} aria-label="Start this tutorial" class="absolute inset-0" />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </div>
 </Layout>

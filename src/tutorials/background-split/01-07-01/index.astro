@@ -1,0 +1,15 @@
+<div class="grid min-h-screen place-items-center bg-cyan-500">
+  <!-- `background-split-wrapper` class abstracted in './tailwind.css' -->
+  <div class="background-split-wrapper fixed inset-0 hidden min-[480px]:grid">
+    <div class="col-span-2 bg-cyan-600"></div>
+    <div class="col-span-2 bg-cyan-500"></div>
+  </div>
+  <div class="isolate mx-auto w-full max-w-2xl px-8">
+    <div
+      class="grid h-80 overflow-hidden rounded-2xl shadow-2xl min-[480px]:grid-cols-[theme(width.56),1fr]"
+    >
+      <aside class="bg-slate-100"></aside>
+      <main class="bg-white"></main>
+    </div>
+  </div>
+</div>

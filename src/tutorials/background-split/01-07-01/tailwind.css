@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .background-split-wrapper {
+    @apply grid-cols-[minmax(theme(padding.8),1fr),theme(width.56),minmax(0,calc(theme(maxWidth.2xl)-theme(width.56)-(theme(padding.8)*2))),minmax(theme(padding.8),1fr)];
+  }
+}
