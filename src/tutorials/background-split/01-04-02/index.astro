@@ -1,5 +1,12 @@
 <div class="grid min-h-screen place-items-center bg-cyan-500">
-  <!-- 672 - 224 - 64 = 384 -->
+  <!-- 
+    The calculation:
+        672px (max-w-2xl) 
+      - 224px (side panel) 
+      - 64px (Card padding) 
+      ~~~~~~
+      = 384px
+    -->
   <div class="fixed inset-0 hidden grid-cols-[1fr,theme(width.56),384px,1fr] min-[480px]:grid">
     <div class="bg-cyan-400"></div>
     <div class="bg-cyan-500"></div>
