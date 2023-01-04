@@ -4,5 +4,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/container-queries')],
+  plugins: [
+    require('@tailwindcss/container-queries'),
+    require('./src/tutorials/animated-stripes/01-08-02/stripes-plugin.cjs'),
+  ],
 }
