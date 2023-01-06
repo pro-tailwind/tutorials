@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-  .gradient-demo {
+  .stripes {
     /* Do your thing! */
   }
 }

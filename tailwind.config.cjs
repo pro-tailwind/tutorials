@@ -6,6 +6,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/container-queries'),
-    // require('./src/tutorials/animated-stripes/01-08-02/stripes-plugin.cjs'),
+    require('./src/tutorials/animated-stripes/01-08-02/stripes-plugin.cjs'),
   ],
 }
