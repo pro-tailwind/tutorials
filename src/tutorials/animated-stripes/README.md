@@ -2,7 +2,7 @@
 
 Welcome to this tutorial!
 
-To get started, clone this repo [from the root folder](https://github.com/pro-tailwind/tutorials/tree/main/src/tutorials/animated-stripes)
+To get started, clone this repo [from the root folder](https://github.com/pro-tailwind/tutorials).
 
 This is an Astro site. All my tutorials are contained within it.
 
