@@ -1,45 +1,31 @@
-# Astro Starter Kit: Minimal
+# Pro Tailwind FREE Tutorials
 
-```
-npm create astro@latest -- --template minimal
-```
+This repo rocks Astro 🚀, This is where all my Pro Tailwind FREE tutorials are contained.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+To get started, clone this repo [from the root folder](https://github.com/pro-tailwind/tutorials/tree/main/src/tutorials/animated-stripes)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+After cloning, install dependencies with
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+npm install
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+You can then start the server with
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```sh
+npm run dev
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+This will open the tutorials homepage.
 
-## 🧞 Commands
+## Where is the code?
 
-All commands are run from the root of the project, from a terminal:
+The source code for each challenge lives in the `src/tutorials/{tutorial}` directory.
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+If you visit the URL for a given challenge, say `http://127.0.0.1:3000/tutorials/{tutorial}/01-04-03`...
 
-## 👀 Want to learn more?
+... the code snippets for this challenge will be in `src/tutorials/{tutorial}/01-04-03`
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Annnnd, that's about it!
+
+Have fun ❤️
